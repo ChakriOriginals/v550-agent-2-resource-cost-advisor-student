@@ -31,7 +31,7 @@
     "local-review-bundles.md": "c9d33558fb4dabc6918eca941384ca89a228cab10d8a37e69c91c01887d384d5",
     "scenario-1-background.md": "a7bfa032bb061d34d4cc90aa7bcc02c7fc8984aa129f85c226c584fea0abb273",
     "scenario-2-standardized-data.md": "5fd87a461f4c0465f6722377cad01ce9585da787c65c6af74ed7980f68dca161",
-    "student-workflow.md": "8444d34c97fd2ceab350778dfd40d59d508b791a1e3161872d3dc65969500a6b"
+    "student-workflow.md": "bc60eb062a1e37149369757fd0399d1af1f17c02dfcfea39ff67c9901c8da325"
   },
   "resolved_conflicts": [
     "Scenario 2 replaces the previous student-estimate-only labor pilot with fixed rate table 1.0 and deterministic approved cash unit costs.",

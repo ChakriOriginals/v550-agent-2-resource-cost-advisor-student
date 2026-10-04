@@ -6,7 +6,7 @@ This local learning advisor helps you turn an approved Agent 1 WBS into a staffe
 
 - Python 3.11 or newer
 - Codex CLI or the Codex desktop app
-- Your approved Agent 1 WBS as JSON, Markdown, a Living Project File, a review-bundle ZIP, or a structured DOCX table
+- Your approved Agent 1 WBS as JSON, Markdown, a Living Project File, a review-bundle ZIP, or the standard Agent 1 DOCX table
 
 No course account, API key, token, or environment file is required.
 
@@ -27,7 +27,9 @@ For Codex CLI, run `./start-v550.sh`. On macOS with the desktop app, run `./star
 
 ## What happens in a session
 
-The advisor first explains the local privacy boundary and asks for your consent. Only after you agree does it ask you to upload the approved WBS. It verifies the file hash, preserves the WBS identifiers and links, shows a normalized preview, and waits for your confirmation.
+The advisor first explains the local privacy boundary and asks for your consent. Only after you agree does it ask you to upload the approved WBS. It verifies the file hash, reads the standard `WBS #`, `Work package`, `Assigned party`, `Hours`, and `Deadline` columns, and shows a normalized preview for your confirmation. It preserves the original IDs, hours, and deadlines. Parent links, deliverable links, full roster names, approved status, and pre-/post-vote labels may be derived only from the WBS numbering, fixed course roster, explicit Agent 1 approval statement, and fixed May 14 vote boundary; every derived field is disclosed.
+
+Rows such as `1.0`, `2.0`, and `3.0` are treated as deliverable summaries, so their hours are checked against—but never added on top of—the detailed work-package hours. A schedule gap in an approved WBS is accepted at handoff and examined later during advising instead of causing the upload to be rejected.
 
 Guided mode is the default and asks one focused question at a time. Independent mode gives you the complete blank packet so you can work at your own pace. Both modes use the same requirements:
 
@@ -46,7 +48,6 @@ After the advisor produces `## V550 Stage 2 Final Learning Review`, send `Genera
 ## Troubleshooting
 
 - If installation stops, move the old installed skill aside only after deciding you no longer need it, then rerun the installer.
-- If a WBS cannot be read, export it as a structured JSON or Markdown table with the original IDs, parent links, deliverable links, scope status, and PRE_VOTE or POST_VOTE label.
+- If the standard Agent 1 DOCX cannot be read, confirm that it contains an explicit Agent 1 approval statement and the `WBS #`, `Work package`, `Assigned party`, `Hours`, and `Deadline` columns. For other formats, include the original IDs and either explicit metadata or enough numbered deliverable rows and dates for deterministic normalization.
 - If the advisor cannot find a local session for bundle generation, open this repository as the Codex workspace and retry in the same chat.
 - Run `python3 -m unittest discover -s tests -p 'test_*.py'` for the full offline test suite.
-
