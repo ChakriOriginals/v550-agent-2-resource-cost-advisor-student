@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.env*
+.v550-agent2/
+V550 Agent 2 Work/
+V550 Agent 2 Review Bundles/
+*.zip
+*.docx
+*.xlsx
+*.pptx
+student-data/
+uploads/
+

@@ -1,0 +1,4 @@
+interface:
+  display_name: "V550 Agent 2 Resource and Cost Advisor"
+  short_description: "Build and defend a local Stage 2 resource plan"
+  default_prompt: "Use $v550-agent-2-resource-cost-advisor-student to continue my local Stage 2 resource and cost plan."

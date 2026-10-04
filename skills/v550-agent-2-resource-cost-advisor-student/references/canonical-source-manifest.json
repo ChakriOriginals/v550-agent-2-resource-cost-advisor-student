@@ -1,0 +1,40 @@
+{
+  "schema_version": "2.0.0",
+  "extraction_date": "2026-10-04",
+  "project": "After the Merger: One Building, Nine Desks",
+  "source_precedence": [
+    "build prompt and explicit user requirements",
+    "Scenario 2 - Making Time",
+    "student uploaded approved Agent 1 WBS",
+    "Scenario 1 After the Merger V2",
+    "Resource and Cost Advisor Workflow"
+  ],
+  "source_documents": [
+    {
+      "filename": "Scenario 2 - Making Time.docx",
+      "sha256": "90aaf0f49b85d2ab5f4fd8b4fe5f20e0b024f74dae2087974c616c83314e7adb",
+      "runtime_reference": "scenario-2-standardized-data.md"
+    },
+    {
+      "filename": "Scenario 1 After the Merger V2.docx",
+      "sha256": "655af3b8c7e34ca675dc5b78ef7b03d8854565b89eab01ba2553fb81b7c96d3e",
+      "runtime_reference": "scenario-1-background.md"
+    },
+    {
+      "filename": "Resource and Cost Advisor Workflow.docx",
+      "sha256": "0b484d5eed4b19537aecca9bac7b9248f88860ce1c4da5d1e0f73685eab62527",
+      "runtime_reference": "student-workflow.md"
+    }
+  ],
+  "runtime_references": {
+    "calculation-and-readiness-rules.md": "7ab8537eea861330eefb17d56cfa96be3fd12fbbb7346e7c95459d94e14a641c",
+    "local-review-bundles.md": "c9d33558fb4dabc6918eca941384ca89a228cab10d8a37e69c91c01887d384d5",
+    "scenario-1-background.md": "a7bfa032bb061d34d4cc90aa7bcc02c7fc8984aa129f85c226c584fea0abb273",
+    "scenario-2-standardized-data.md": "5fd87a461f4c0465f6722377cad01ce9585da787c65c6af74ed7980f68dca161",
+    "student-workflow.md": "8444d34c97fd2ceab350778dfd40d59d508b791a1e3161872d3dc65969500a6b"
+  },
+  "resolved_conflicts": [
+    "Scenario 2 replaces the previous student-estimate-only labor pilot with fixed rate table 1.0 and deterministic approved cash unit costs.",
+    "The approved workflow described a pasted WBS and student-entered rates; the build prompt requires a verified upload and fixed Scenario 2 rates, so the build prompt and Scenario 2 control."
+  ]
+}
